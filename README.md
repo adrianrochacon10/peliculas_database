@@ -1,4 +1,4 @@
-# peliculas_database
+# Base de datos para aplicación de Streaming
 
 ## 📌 Documentación para la Planificación del Proyecto de Base de Datos
 
@@ -8,7 +8,7 @@ Este documento describe la base de datos para la aplicación de streaming de pel
 
 ## 1️⃣ Información del Proyecto
 
-**📌 Nombre del Proyecto:** `peliculas_database`  
+**📌 Nombre del Proyecto:** `Streaming_8A`  
 **📖 Descripción:** Base de datos para gestionar el contenido de una plataforma de streaming de películas. Permitirá almacenar información sobre películas, usuarios, reproducciones y más.  
 **🎯 Objetivo:** Proveer una estructura eficiente para almacenar y gestionar datos relacionados con el catálogo de películas y el comportamiento de los usuarios dentro de la plataforma.
 
@@ -38,10 +38,47 @@ _A continuación, se proporcionará el script para la creación de la base de da
 
 ```sql
 -- Crear base de datos
-CREATE DATABASE peliculas_database;
+CREATE DATABASE Streaming_8A;
 USE peliculas_database;
 
--- Creación de tablas (Estructura pendiente de definir)
+-- Creación de tablas
+
+--Tabla de usuarios
+
+CREATE TABLE Usuarios (
+    usuario_ID INT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    ap_paterno VARCHAR(255) NOT NULL,
+    ap_materno VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    rol BOOLEAN NOT NULL DEFAULT FALSE,
+    ultima_sesion TIMESTAMP,
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    actualizado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+--Tabla de Reseñas
+CREATE TABLE resenas (
+    resena_id INT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    pelicula_id INT NOT NULL,
+    calificacion INT CHECK (calificacion BETWEEN 1 AND 5),
+    comentario VARCHAR(50),
+    fecha_resena TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuario_ID ON DELETE CASCADE
+);
+
+--Tabla de historial_visualizacion
+CREATE TABLE historial_visualizacion (
+    historial_visualizacion_ID INT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    pelicula_id INT NOT NULL,
+    progreso INT CHECK (progreso BETWEEN 0 AND 100),
+    fecha_visto TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuario_ID ON DELETE CASCADE
+)
+
 ```
 
 ---
