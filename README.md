@@ -9,9 +9,9 @@ Este documento describe la base de datos para la aplicación de streaming de pel
 ## 1.- Información del Proyecto
 
 **📌 Nombre del Proyecto:** `Streaming_8A`  
---
+
 **📖 Descripción:** Base de datos para gestionar el contenido de una plataforma de streaming de películas. Permitirá almacenar información sobre películas, usuarios, reproducciones y más.  
---
+
 **🎯 Objetivo:** Proveer una estructura eficiente para almacenar y gestionar datos relacionados con el catálogo de películas y el comportamiento de los usuarios dentro de la plataforma.
 
 ---
