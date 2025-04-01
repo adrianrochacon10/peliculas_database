@@ -20,11 +20,12 @@ Este documento describe la base de datos para la aplicación de streaming de pel
 
 _A continuación, se presenta la estructura de las tablas. Esta se irá completando con el desarrollo del proyecto._
 
-- **`usuarios`**: Almacena información sobre los usuarios de la plataforma.
-- **`peliculas`**: Contiene datos sobre las películas disponibles en la aplicación.
-- **`categorias`**: Clasifica las películas por género o temática.
-- **`reproducciones`**: Registra el historial de reproducciones de los usuarios.
-- **`favoritos`**: Guarda la lista de películas marcadas como favoritas por los usuarios.
+- **`Usuarios`**: Almacena información sobre los usuarios de la plataforma.
+- **`Peliculas`**: Contiene datos sobre las películas disponibles en la aplicación.
+- **`Series`**: Contiene datos sobre las series disponibles en la aplicación.
+- **`Reseñas`**: Almacena información sobre las reseñas hechas por los usuarios de las peliculas y series.
+- **`Historial_visualizacion`**: Registra el historial de las peliculas y series de los usuarios.
+_Aquí faltan mas tablas de mongodb._
 
 ---
 
