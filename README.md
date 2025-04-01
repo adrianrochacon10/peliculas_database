@@ -14,7 +14,7 @@ Este documento describe la base de datos para la aplicación de streaming de pel
 
 ---
 
-## 2.- Tablas 📊
+## 2.- Tablas
 
 _A continuación, se presenta la estructura de las tablas. Esta se irá completando con el desarrollo del proyecto._
 
@@ -26,13 +26,13 @@ _A continuación, se presenta la estructura de las tablas. Esta se irá completa
 
 ---
 
-## 3.- Diagramas 🖼️
+## 3.- Diagramas
 
 _Aquí se incluirán diagramas ERD y de relaciones entre tablas._
 
 ---
 
-## 4.- Script de Creación de la Base de Datos 🛠️
+## 4.- Script de Creación de la Base de Datos
 
 _A continuación, se proporcionará el script para la creación de la base de datos una vez que la estructura de las tablas esté definida._
 
@@ -83,7 +83,7 @@ CREATE TABLE historial_visualizacion (
 
 ---
 
-## 5.- Documentación para Uso de la Base de Datos 📚
+## 5.- Documentación para Uso de la Base de Datos
 
 Se proporcionará información sobre:
 
@@ -94,7 +94,7 @@ Se proporcionará información sobre:
 
 ---
 
-## 6.- Notas Adicionales 📝
+## 6.- Notas Adicionales
 
 - 🔹 Se recomienda definir bien las relaciones entre las tablas antes de su implementación.
 - 🔹 Se podrá agregar documentación adicional conforme avance el proyecto.
