@@ -42,7 +42,7 @@ _A continuación, se proporcionará el script para la creación de la base de da
 ```sql
 -- Crear base de datos
 CREATE DATABASE Streaming_8A;
-USE peliculas_database;
+USE Streaming_8A;
 
 -- Creación de tablas
 
