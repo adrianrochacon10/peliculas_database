@@ -44,44 +44,6 @@ _A continuación, se proporcionará el script para la creación de la base de da
 CREATE DATABASE Streaming_8A;
 USE Streaming_8A;
 
--- Creación de tablas
-
---Tabla de usuarios
-
-CREATE TABLE Usuarios (
-    usuario_ID INT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL,
-    ap_paterno VARCHAR(255) NOT NULL,
-    ap_materno VARCHAR(255) NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    rol BOOLEAN NOT NULL DEFAULT FALSE,
-    ultima_sesion TIMESTAMP,
-    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    actualizado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-
---Tabla de Reseñas
-CREATE TABLE resenas (
-    resena_id INT PRIMARY KEY,
-    usuario_id INT NOT NULL,
-    pelicula_id INT NOT NULL,
-    calificacion INT CHECK (calificacion BETWEEN 1 AND 5),
-    comentario VARCHAR(50),
-    fecha_resena TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (usuario_id) REFERENCES usuario_ID ON DELETE CASCADE
-);
-
---Tabla de historial_visualizacion
-CREATE TABLE historial_visualizacion (
-    historial_visualizacion_ID INT PRIMARY KEY,
-    usuario_id INT NOT NULL,
-    pelicula_id INT NOT NULL,
-    progreso INT CHECK (progreso BETWEEN 0 AND 100),
-    fecha_visto TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (usuario_id) REFERENCES usuario_ID ON DELETE CASCADE
-)
-
 ```
 
 ---
