@@ -25,17 +25,10 @@ _A continuación, se presenta la estructura de las tablas. Esta se irá completa
 - **`Series`**: Contiene datos sobre las series disponibles en la aplicación.
 - **`Reseñas`**: Almacena información sobre las reseñas hechas por los usuarios de las peliculas y series.
 - **`Historial_visualizacion`**: Registra el historial de las peliculas y series de los usuarios.
-_Aquí faltan mas tablas de mongodb._
 
 ---
 
-## 3.- Diagramas
-
-_Aquí se incluirán diagramas ERD y de relaciones entre tablas._
-
----
-
-## 4.- Script de Creación de la Base de Datos
+## 3.- Script de Creación de la Base de Datos
 
 _A continuación, se proporcionará el script para la creación de la base de datos una vez que la estructura de las tablas esté definida._
 
@@ -48,7 +41,7 @@ USE Streaming_8A;
 
 ---
 
-## 5.- Documentación para Uso de la Base de Datos
+## 4.- Documentación para Uso de la Base de Datos
 
 Se proporcionará información sobre:
 
@@ -56,13 +49,6 @@ Se proporcionará información sobre:
 - 📌 **Procedimientos almacenados** para optimizar operaciones.
 - 📌 **Vistas** para simplificar consultas frecuentes.
 - 📌 **Mantenimiento de la base de datos** (copias de seguridad, optimización de índices, etc.).
-
----
-
-## 6.- Notas Adicionales
-
-- 🔹 Se recomienda definir bien las relaciones entre las tablas antes de su implementación.
-- 🔹 Se podrá agregar documentación adicional conforme avance el proyecto.
 
 ---
 
